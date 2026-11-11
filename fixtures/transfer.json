@@ -1,0 +1,13 @@
+{
+  "name": "transfer",
+  "run_id": "run-transfer",
+  "sources": [
+    "/roster"
+  ],
+  "options": {
+    "on": "2026-11-07",
+    "complete": true
+  },
+  "fixture_root": "fixtures",
+  "portal_database": "portal.sqlite3"
+}

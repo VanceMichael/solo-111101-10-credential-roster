@@ -1,0 +1,13 @@
+{
+  "name": "past_roster",
+  "run_id": "run-past_roster",
+  "sources": [
+    "/roster"
+  ],
+  "options": {
+    "on": "2026-11-04",
+    "complete": true
+  },
+  "fixture_root": "fixtures",
+  "portal_database": "portal.sqlite3"
+}

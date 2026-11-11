@@ -1,0 +1,23 @@
+{
+  "/roster": [
+    {
+      "status": 200,
+      "file": "roster.csv",
+      "headers": {
+        "ETag": "v1"
+      }
+    }
+  ],
+  "/rollback": [
+    {
+      "status": 200,
+      "file": "rollback.csv"
+    }
+  ],
+  "/conflict": [
+    {
+      "status": 200,
+      "file": "conflict.csv"
+    }
+  ]
+}

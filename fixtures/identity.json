@@ -1,0 +1,14 @@
+{
+  "name": "identity",
+  "run_id": "run-identity",
+  "sources": [
+    "/roster",
+    "/conflict"
+  ],
+  "options": {
+    "on": "2026-11-07",
+    "complete": false
+  },
+  "fixture_root": "fixtures",
+  "portal_database": "portal.sqlite3"
+}

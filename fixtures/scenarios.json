@@ -1,0 +1,96 @@
+[
+  {
+    "name": "past_roster",
+    "run_id": "run-past_roster",
+    "sources": [
+      "/roster"
+    ],
+    "options": {
+      "on": "2026-11-04",
+      "complete": true
+    },
+    "expected": {
+      "roster": [
+        {
+          "person": "ID-A",
+          "project": "P1",
+          "qualified": true
+        },
+        {
+          "person": "ID-B",
+          "project": "P1",
+          "qualified": true
+        }
+      ],
+      "generation": 10
+    }
+  },
+  {
+    "name": "transfer",
+    "run_id": "run-transfer",
+    "sources": [
+      "/roster"
+    ],
+    "options": {
+      "on": "2026-11-07",
+      "complete": true
+    },
+    "expected": {
+      "roster": [
+        {
+          "person": "ID-A",
+          "project": "P2",
+          "qualified": true
+        }
+      ],
+      "work": [
+        {
+          "id": "W1",
+          "linked": true,
+          "project": "P1"
+        }
+      ]
+    }
+  },
+  {
+    "name": "rollback",
+    "run_id": "run-rollback",
+    "sources": [
+      "/roster",
+      "/rollback"
+    ],
+    "options": {
+      "on": "2026-11-07",
+      "complete": true
+    },
+    "expected": {
+      "generation": 10,
+      "quarantine": [
+        {
+          "reason": "generation_rollback"
+        }
+      ]
+    }
+  },
+  {
+    "name": "identity",
+    "run_id": "run-identity",
+    "sources": [
+      "/roster",
+      "/conflict"
+    ],
+    "options": {
+      "on": "2026-11-07",
+      "complete": false
+    },
+    "expected": {
+      "quarantine": [
+        {
+          "person": "ID-A",
+          "reason": "identity_conflict"
+        }
+      ],
+      "generation": 10
+    }
+  }
+]

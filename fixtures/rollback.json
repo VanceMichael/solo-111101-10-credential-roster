@@ -1,0 +1,14 @@
+{
+  "name": "rollback",
+  "run_id": "run-rollback",
+  "sources": [
+    "/roster",
+    "/rollback"
+  ],
+  "options": {
+    "on": "2026-11-07",
+    "complete": true
+  },
+  "fixture_root": "fixtures",
+  "portal_database": "portal.sqlite3"
+}
